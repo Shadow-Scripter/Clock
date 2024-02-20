@@ -1,3 +1,4 @@
+
 function updateClock(){
     const now = new Date();
     let hours = now.getHours();
@@ -6,10 +7,10 @@ function updateClock(){
     hours = hours.toString().padStart(2, 0);
     const minute = now.getMinutes().toString().padStart(2, 0);
     const second = now.getSeconds().toString().padStart(2, 0);
-    const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
+    const timeString = `${hours}:${minute}:${second} ${meridiem}`;
 
     document.getElementById("clock").textContent = timeString;
 }
 
 updateClock();
-setInterval(updateClock, 1000)
+setInterval(updateClock, 1000);
